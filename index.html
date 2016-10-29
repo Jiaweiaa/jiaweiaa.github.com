@@ -127,8 +127,8 @@
 					//https://jiaweiaa.github.io/img/bg1.jpg
 				oI.src= 'https://jiaweiaa.github.io/img/bg'+i+'.jpg';
 				oI.onload=function(){
-					oLoad_num++;
-					oLoad.innerHTML=(oLoad_num*100/5).toFixed(2)+'%';
+					oLoad_num+=20;
+					oLoad.innerHTML=(oLoad_num/5)+'%';
 					if(oLoad_num==100){
 						oLoad.style.display='none';
 						oMask.style.display='none';
