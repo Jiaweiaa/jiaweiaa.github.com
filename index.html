@@ -128,48 +128,47 @@
 				oI.src= 'https://jiaweiaa.github.io/img/bg'+i+'.jpg';
 				oI.onload=function(){
 					oLoad_num++;
-					var scale_load=	oLoad_num/5;
 					oLoad.innerHTML=(oLoad_num*100/5).toFixed(2)+'%';
 					if(oLoad_num==100){
-				oLoad.style.display='none';
-				oMask.style.display='none';
-				move(oLog,{
-					opacity:1
-				},{
-					complete:function(){
-						//加载页动画
-						oL_left.style.transformOrigin='left center';
-						oL_left.style.transform='rotateX(180deg)';
-						oL_right.style.transformOrigin='center center';		
-						oL_right.style.transform='rotateX(-180deg)';
-						move(oLoading,{
-							'opacity':0
-							
-					},{
-						complete:function(){
-							oCatalog.style.display='block';
-							oWorks.style.display='block';
-							oMoment_r.style.display='block';
-							oAbout_m.style.display='block';
-							oThe_e.style.display='block';
-							move(oContents,{
-								'top':90
+						oLoad.style.display='none';
+						oMask.style.display='none';
+						move(oLog,{
+							opacity:1
+						},{
+							complete:function(){
+								//加载页动画
+								oL_left.style.transformOrigin='left center';
+								oL_left.style.transform='rotateX(180deg)';
+								oL_right.style.transformOrigin='center center';		
+								oL_right.style.transform='rotateX(-180deg)';
+								move(oLoading,{
+									'opacity':0
+									
 							},{
-								duration:1000,
 								complete:function(){
-									oContents.style.transition='1s all ease';	
+									oCatalog.style.display='block';
+									oWorks.style.display='block';
+									oMoment_r.style.display='block';
+									oAbout_m.style.display='block';
+									oThe_e.style.display='block';
+									move(oContents,{
+										'top':90
+									},{
+										duration:1000,
+										complete:function(){
+											oContents.style.transition='1s all ease';	
+											}
+										})
 									}
 								})
 							}
-						})
+						});
+						clearInterval(oLoad_timer);
 					}
-				});
-				clearInterval(oLoad_timer);
-			}
 				}
 			}
-			
 		},10);
+		
 		for(var i=0;i<oCont_li.length;i++){
 			oCont_li[i].index=i;
 			oCont_li[i].onmouseover=function(){
