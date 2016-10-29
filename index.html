@@ -124,14 +124,13 @@
 		oLoad_timer = setInterval(function(){
 			for(var i=1;i<6;i++){
 				var oI=new Image();
+					//https://jiaweiaa.github.io/img/bg1.jpg
 				oI.src= 'https://jiaweiaa.github.io/img/bg'+i+'.jpg';
 				oI.onload=function(){
 					oLoad_num++;
 					var scale_load=	oLoad_num/5;
 					oLoad.innerHTML=(oLoad_num*100/5).toFixed(2)+'%';
-				}
-			}
-			if(oLoad_num==100){
+					if(oLoad_num==100){
 				oLoad.style.display='none';
 				oMask.style.display='none';
 				move(oLog,{
@@ -167,6 +166,9 @@
 				});
 				clearInterval(oLoad_timer);
 			}
+				}
+			}
+			
 		},10);
 		for(var i=0;i<oCont_li.length;i++){
 			oCont_li[i].index=i;
