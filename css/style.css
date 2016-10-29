@@ -254,7 +254,7 @@ body,html{
 .A_moment_relief{
 	height:715px;
 	background:url(../img/bg5.jpg) no-repeat fixed;
-	background-size:100%;
+	background-size:100% 100%;
 	display:none;
 }
 .A_moment_relief p{
@@ -357,7 +357,7 @@ body,html{
 	height:715px;
 	display:none;
 	background:url(../img/bg4.jpg) no-repeat fixed;
-	background-size:100%;
+	background-size:100% 100%;
 }
 .About_me p{
     width: 100%;
@@ -474,7 +474,7 @@ body,html{
 	height:715px;
 	display:none;
 	background:url(../img/bg3.jpg) no-repeat fixed;
-	background-size:100%;
+	background-size:100% 100%;
 }
 .The_end p{
     width: 100%;
