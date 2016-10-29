@@ -119,8 +119,6 @@
 		
 		//事件预加载
 		var oLoad_num=0;
-		var oLoad_timer=null;
-		var oTranslate_arr=['内容1','内容2','内容3','内容4','内容5'];
 		oLoad.innerHTML='0%';
 		for(var i=1;i<6;i++){
 			var oI=new Image();
@@ -144,7 +142,6 @@
 							oL_right.style.transform='rotateX(-180deg)';
 							move(oLoading,{
 								'opacity':0
-								
 						},{
 							complete:function(){
 								oCatalog.style.display='block';
@@ -168,6 +165,8 @@
 			}
 		}
 
+
+		var oTranslate_arr=['Welcome to my personal station!','If there is anything to represent their ability is the work.','Sometimes its okay to relax!','My ability time will prove!','Thank you for giving me a chance to show myself!'];
 		
 		for(var i=0;i<oCont_li.length;i++){
 			oCont_li[i].index=i;
@@ -179,16 +178,15 @@
 				},{
 					complete:(function(i){
 						oTranslate.style.display='block';
-						oTranslate.innerHTML=oTranslate_arr[i]+'<span class="left"></span><span class="right"></span><span class="bottom"></span><span class="top"></span>';
+						oTranslate.innerHTML='<span class="left"></span><span class="right"></span><span class="bottom"></span><span class="top"></span>'+oTranslate_arr[i];
 						var oTranslate_c1=oTranslate.children[0];
 						var oTranslate_c2=oTranslate.children[1];
 						var oTranslate_c3=oTranslate.children[2];
 						var oTranslate_c4=oTranslate.children[3];			
 						move(oTranslate_c1,{'height':232});
 						move(oTranslate_c2,{'height':220});
-						move(oTranslate_c3,{'width':413});
-						move(oTranslate_c4,{'width':407});
-						
+						move(oTranslate_c3,{'width':424});
+						move(oTranslate_c4,{'width':414});
 					})(this.index)
 				});
 			};
@@ -198,8 +196,6 @@
 			}
 		}
 		//标题栏 下横线
-		
-		
 		//事件滚动
 		document.onscroll=function(){
 			
@@ -265,16 +261,16 @@
 					},{
 						complete:(function(i){
 								oTranslate.style.display='block';
-								oTranslate.innerHTML=oTranslate_arr[i]+'<span class="left"></span><span class="right"></span><span class="bottom"></span><span class="top"></span>';
+								oTranslate.innerHTML='<span class="left"></span><span class="right"></span><span class="bottom"></span><span class="top"></span>'+oTranslate_arr[i];
 								var oTranslate_c1=oTranslate.children[0];
 								var oTranslate_c2=oTranslate.children[1];
 								var oTranslate_c3=oTranslate.children[2];
-								var oTranslate_c4=oTranslate.children[3];                   
+								var oTranslate_c4=oTranslate.children[3];			
 								move(oTranslate_c1,{'height':232});
 								move(oTranslate_c2,{'height':220});
-								move(oTranslate_c3,{'width':413});
-								move(oTranslate_c4,{'width':407});
-								})(this.index)
+								move(oTranslate_c3,{'width':424});
+								move(oTranslate_c4,{'width':414});
+							})(this.index)
 						});
 					}
 				}		
@@ -282,7 +278,7 @@
 			
 			// 标题跟随 移入那块 当前标题变大
 			//全部内容高度  class名根据scrolltop添加
-			var oBh=oBody.offsetHeight;
+			var oBh=oBody.offsetHeight-100;
 			//1/5的高度
 			var fH=oBh/oCont_li.length;
 			if(fH>=oH){
@@ -414,25 +410,12 @@
 					Move_num++;
 					document.body.scrollTop+=Move_num;
 					var scT=_this*oWorks.offsetHeight;
-					if(document.body.scrollTop>=_this*715){
+					if(document.body.scrollTop>=_this*700){
 						document.body.scrollTop=_this*715;
 						clearInterval(timer);
 						Move_bOk=true;
 					}
-				},40);
-				var N_timer=null;
-				if(this.index*oWorks.offsetHeight<document.body.scrollTop){
-					var N_timer=setInterval(function(){
-						Move_num1--;
-						document.body.scrollTop+=Move_num1;
-						console.log(_this,oWorks.offsetHeight);
-						if(document.body.scrollTop<=_this*oWorks.offsetHeight){
-							document.body.scrollTop=_this*715;
-							Move_bOk=true;
-							clearInterval(N_timer);
-						}
-					},50);
-				}
+				},30);
 			}
 		}
 		
@@ -486,6 +469,7 @@
     
     <!-- 目录 -->
     <div class="Catalog" id="Catalog">
+   		
     	<p id="translate" class="translate">
             <span class="left"></span>
             <span class="right"></span>
