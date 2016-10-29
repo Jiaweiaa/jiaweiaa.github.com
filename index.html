@@ -330,7 +330,7 @@
 				},1000)
 				setTimeout(function(){
 					move(oWorks_p[4],{
-						height:260
+						height:347
 					})			
 				},1000)
 				move(oWorks_p[3],{
@@ -395,7 +395,7 @@
 		
 		//  锚点动画
 		var Move_num=0;
-		var Move_num1=0;
+		var Move_num1=-1;
 		var Move_bOk=true;
 		oCont_li[0].onclick=function(){
 			document.body.scrollTop=0;
@@ -410,8 +410,8 @@
 					Move_num++;
 					document.body.scrollTop+=Move_num;
 					var scT=_this*oWorks.offsetHeight;
-					if(document.body.scrollTop>=_this*700){
-						document.body.scrollTop=_this*715;
+					if(document.body.scrollTop>=_this*779){
+						document.body.scrollTop=_this*800;
 						clearInterval(timer);
 						Move_bOk=true;
 					}
