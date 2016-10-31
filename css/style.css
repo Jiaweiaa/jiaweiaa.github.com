@@ -191,7 +191,7 @@ body,html{
 .for_work .work_one{
 	background:#12172b;
 	position:absolute;
-	top:5%;
+	top:100px;
 }
 .for_work .work_one a{
 	background:url(../LHHXGame/img/img/logo.gif) no-repeat center center;
@@ -199,7 +199,9 @@ body,html{
 .for_work .work_two{
 	background:#f8b8c6;
 	position:absolute;
-	top:255px;
+	right:20%;
+	top:50%;
+	margin-top:-91px;
 }
 .for_work .work_two a span{
 	background:rgba(97,68,80,0.7);
@@ -210,7 +212,7 @@ body,html{
 .for_work .work_three{
 	background:#fff;
 	position:absolute;
-	top:65%;
+	bottom:100px;
 }
 .for_work .work_three a{
 	background:url(../img/Mi.png) no-repeat center center;
@@ -232,26 +234,26 @@ body,html{
 	height:2px;
 	position:absolute;
 	left:60%;
-	top:235px;
+	top:264px;
 }
 .for_work .work_ps{
 	width:2px;
 	position:absolute;
 	left:60%;
-	top:235px;
+	top:264px;
 	margin-left:350px;
 }
 .for_work .work_pq{
 	height:2px;
 	position:absolute;
 	left:60%;
-	top:453px;
+	top:528px;
 }
 .for_work .work_pe{
 	width:2px;
 	position:absolute;
 	left:60%;
-	top:453px;
+	top:528px;
 }
 .A_moment_relief{
 	height:800px;
@@ -261,10 +263,10 @@ body,html{
 }
 .A_moment_relief p{
     width: 100%;
-    height: 180px;
+    height: 190px;
 }
 .A_moment_relief .moment_div{
-	height: 620px;
+	height: 610px;
 	width:100%;
 	background:#fff;
 	margin:0 auto;
@@ -329,11 +331,34 @@ body,html{
 	transform-style:preserve-3d;
 	transition:1s all ease;
 }
+.A_moment_relief div a{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+}
 .A_moment_relief .Moment_one{
 	left:50%;
 	top:0;
 	margin-left:-430px;
 	transform:translateY(1105px);
+}
+.A_moment_relief .Moment_one .head{
+	background:url(../img/game_snake.jpg);
+	background-size:100% 100%;
+}
+.A_moment_relief .Moment_two .head{
+	background:url(../img/game_2048.jpg);
+	background-size:100% 100%;
+}
+.A_moment_relief .Moment_three .head{
+	background:url(../img/game_live.jpg);
+	background-size:100% 100%;
+}
+.A_moment_relief .Moment_four .head{
+	background:url(../img/game_pic.jpg);
+	background-size:100% 100%;
 }
 .A_moment_relief .Moment_two{
 	left:50%;
@@ -362,12 +387,12 @@ body,html{
 	background-size:100% 100%;
 }
 .About_me p{
-    width: 100%;
-    height: 180px;
+    width:100%;
+   	height:190px;
     background: rgba(0,0,0,0.5);
 }
 .About_me div{
-	height: 620px;
+	height: 610px;
 	width:100%;
 	background:#fff;
 	margin:0 auto;
@@ -480,11 +505,11 @@ body,html{
 }
 .The_end p{
     width: 100%;
-    height: 180px;
+    height: 190px;
     background: rgba(0,0,0,0.5);
 }
 .The_end div{
-	height: 620px;
+	height: 610px;
 	width:100%;
 	background:#fff;
 	margin:0 auto;
