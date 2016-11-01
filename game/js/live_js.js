@@ -221,7 +221,7 @@ window.onload=function(){
 		}
 		
 		function addBall(){
-			for(var i=0;i<25;i++){
+			for(var i=0;i<15;i++){
 				changeDiv();
 			}
 		}
