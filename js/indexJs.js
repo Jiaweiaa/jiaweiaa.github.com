@@ -389,10 +389,10 @@
 		
 		//  锚点动画
 		var Move_num=0;
-		var Move_num1=-1;
 		var Move_bOk=true;
+		var oH=document.documentElement.scrollTop||document.body.scrollTop;
 		oCont_li[0].onclick=function(){
-			oH=0;
+			document.documentElement.scrollTop=document.body.scrollTop=0;
 		};
 		for(var i=1;i<oCont_li.length;i++){
 			oCont_li[i].index=i		
@@ -402,10 +402,11 @@
 				var _this=this.index;
 				timer=setInterval(function(){
 					Move_num++;
-					oH+=Move_num;
+					document.documentElement.scrollTop+=Move_num;
+					document.body.scrollTop+=Move_num;
 					var scT=_this*oWorks.offsetHeight;
-					if(oH>=_this*730){
-						oH=_this*800;
+					if(document.body.scrollTop>=_this*730 || document.documentElement.scrollTop >= _this *730){
+						document.documentElement.scrollTop=document.body.scrollTop=_this*800;
 						clearInterval(timer);
 						Move_bOk=true;
 					}
