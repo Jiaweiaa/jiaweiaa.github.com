@@ -305,7 +305,7 @@
 			}
 			
 			//work 动画
-			if(document.body.scrollTop>=400){
+			if(oH>=400){
 				oWorks_c[0].style.left='20%';
 				oWorks_c[2].style.left='20%';
 				oWorks_c[1].style.left='50%';
@@ -332,7 +332,7 @@
 			}
 			
 			//game 动画
-			if(document.body.scrollTop>=1300){
+			if(oH>=1300){
 				oMoment_m[0].style.transform='translateY(0px)';
 				oMoment_m[1].style.transform='translateY(0px)';
 				oMoment_m[2].style.transform='translateY(0px)';
@@ -350,7 +350,7 @@
 			}		
 			
 			// skil 4个球运动动画
-			if(document.body.scrollTop>=2100){
+			if(oH>=2100){
 				for(var i=0;i<oMsk.length;i++){
 					oMsk[i].style.transform='translate(0,0)';
 					oMsk[i].style.transition='1.5s all cubic-bezier(0.96, 1.52, 0, 0.9)';
@@ -392,7 +392,7 @@
 		var Move_num1=-1;
 		var Move_bOk=true;
 		oCont_li[0].onclick=function(){
-			document.body.scrollTop=0;
+			oH=0;
 		};
 		for(var i=1;i<oCont_li.length;i++){
 			oCont_li[i].index=i		
@@ -402,10 +402,10 @@
 				var _this=this.index;
 				timer=setInterval(function(){
 					Move_num++;
-					document.body.scrollTop+=Move_num;
+					oH+=Move_num;
 					var scT=_this*oWorks.offsetHeight;
-					if(document.body.scrollTop>=_this*730){
-						document.body.scrollTop=_this*800;
+					if(oH>=_this*730){
+						oH=_this*800;
 						clearInterval(timer);
 						Move_bOk=true;
 					}
