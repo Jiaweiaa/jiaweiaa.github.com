@@ -121,7 +121,6 @@
 			oI.onload=function(){
 				oLoad_num++;
 				oLoad.innerHTML=(oLoad_num*100/5)+'%';
-				console.log(oLoad_num);
 				if(oLoad_num==5){
 					oLoad.style.display='none';
 					oMask.style.display='none';
