@@ -1,10 +1,10 @@
-  Preview URL	 jiaweiaa.github.com
+  Preview URL:	 jiaweiaa.github.com
 
-  Author 		 Jiawei Wang
+  Author: 		 Jiawei Wang
 
-  Creation time  2016.11.6
+  Creation time:  2016.11.6
 
-  Page body 	 原生JavaScript
+  Page body: 	 原生JavaScript
 
 	
 
