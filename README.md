@@ -1,4 +1,4 @@
-  Preview URL:	 jiaweiaa.github.com
+  Preview URL:	 jiaweiaa.github.io
 
   Author: 		 Jiawei Wang
 
